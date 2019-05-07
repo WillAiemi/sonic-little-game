@@ -6,11 +6,16 @@
 .background {
     height: 100%;
     width: 100%;
-    background-color: DodgerBlue;
+    background-color: LightSeaGreen;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+}
+
+#first_page {
+    background-color: DodgerBlue;
     justify-content: center;
 }
 
@@ -36,4 +41,32 @@
 .button:hover {
     box-shadow: 5px 5px 20px black;
     cursor: pointer;
+}
+
+#header_select {
+    background-color: IndianRed;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#header_select h1 {
+    margin-left: 0.5em;
+    color: white;
+    font-size: 4em;
+    font-family: monospace;
+}
+
+.div_images {
+    background-color: DarkCyan;
+    height: 70%;
+    width: 70%;
+    box-shadow: 2px 2px 10px black;
+}
+
+.div_images article {
+    height: 85%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
 }
