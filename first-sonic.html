@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sonic 1</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/spritesheet.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="background">
+            <header class="header_style_1">
+                <h1>Click to navigate through Sonic sprites...</h1>
+            </header>
+            <div class="main_container flex_center">
+                <div class="canvas_container">
+                    <canvas id="canvas_sonic_1" width="300" height="300"></canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById('canvas_sonic_1');
+                        var context = canvas.getContext('2d');
+
+                        var imgSonic = new Image();
+                        imgSonic.src = ""; // TODO: find image
+
+                        var spriteSonic = new Spritesheet(context, imgSonic, 0, 0);
+
+                        function changeSprite(sprite) {
+                            clear();
+                            switch (sprite) {
+                                case 1:
+                                    spriteSonic.selectFrame(0, 0);
+                                    spriteSonic.drawSpecific(0, 0, canvas.width, canvas.height);
+                                    break;
+                                case 2:
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    break;
+                            }
+                        }
+
+                        function clear() {
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                        }
+                    </script>
+                </div>
+                <div class="buttons_container">
+                    <button type="button" name="first" onclick="changeSprite(1);">First</button>
+                    <button type="button" name="second" onclick="changeSprite(2);">Second</button>
+                    <button type="button" name="third" onclick="changeSprite(3);">Third</button>
+                    <button type="button" name="fourth" onclick="changeSprite(4);">Fourth</button>
+                    <button type="button" name="clear" onclick="clear();">Clear</button>
+                </div>
+            </div>
+            <footer class="footer_style_1">
+                <a href="select-version.html">Back</a>
+            </footer>
+        </div>
+    </body>
+</html>
