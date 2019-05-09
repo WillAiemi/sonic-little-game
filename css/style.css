@@ -19,7 +19,7 @@
     justify-content: center;
 }
 
-.sonic_image {
+.sonic_logo {
     height: 70%;
     width: 100%;
     background-image: url("../img/sonic-intro.png");
@@ -44,8 +44,7 @@
 }
 
 #header_select {
-    background-color: IndianRed;
-    height: 15%;
+    height: 10%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -60,13 +59,66 @@
 
 .div_images {
     background-color: DarkCyan;
-    height: 70%;
+    height: 75%;
     width: 70%;
     box-shadow: 2px 2px 10px black;
 }
 
-.div_images article {
+#sonic_images {
     height: 85%;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#sonic_images a {
+    height: 90%;
+    width: 30%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-shadow: 2px 2px 10px black;
+}
+
+#sonic_images a:hover {
+    box-shadow: 4px 4px 15px black;
+}
+
+#first_sonic {
+    background-image: url("../img/sonic1.png");
+    background-color: #0567B8;
+}
+
+#second_sonic {
+    background-image: url("../img/sonic2.png");
+    background-color: #0AB5C2;
+}
+
+#third_sonic {
+    background-image: url("../img/sonic3.png");
+    background-color: #08A166;
+}
+
+.div_images div {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#footer_select {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer_select a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25vw;
 }
