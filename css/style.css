@@ -192,3 +192,15 @@
     background-repeat: no-repeat;
     background-position: top;
 }
+
+.canvas_container3 {
+    height: 300px;
+    width: 400px;
+    position: relative;
+}
+
+.canvas_container3 canvas {
+    top: 0;
+    left: 0;
+    position: absolute;
+}

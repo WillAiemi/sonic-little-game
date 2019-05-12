@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Sonic animation!</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/background.js" charset="utf-8"></script>
+        <script src="js/animation.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="background">
+            <header class="header_style_1">
+                <h1>Rendering an animated background</h1>
+            </header>
+            <div class="main_container flex_center">
+                <div class="canvas_container3">
+                    <canvas id="canvas" width="400" height="300"></canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById("canvas");
+                        var context = canvas.getContext("2d");
+
+                        var imgBackground1 = new Image();
+                        imgBackground1.src = "img/background_1.png";
+                        imgBackground1.onload = load;
+
+                        var imgBackground2 = new Image();
+                        imgBackground2.src = "img/background_2.png";
+                        imgBackground2.onload = load;
+
+                        let loaded = 0;
+                        let total = 2;
+
+                        function load() {
+                            loaded++;
+                            if (loaded == total) {
+                                start();
+                            }
+                        }
+
+                        function start() {
+                            var background = new Background(context);
+                            background.speed = 5;
+                            background.newBackground(imgBackground1);
+                            background.newBackground(imgBackground2);
+                            var animation = new Animation(context);
+
+                            animation.newSprite(background);
+                            animation.turnOn();
+                        };
+
+
+
+                    </script>
+                </div>
+            </div>
+            <footer class="footer_style_1">
+                <a href="select-version.html">Back</a>
+            </footer>
+        </div>
+    </body>
+</html>
