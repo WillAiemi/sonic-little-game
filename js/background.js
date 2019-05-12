@@ -26,7 +26,7 @@ Background.prototype = {
         let posX = this.amendmentPosition - img[0].width;
         this.context.drawImage(img[0], posX, 0, img[0].width, img[0].height);
 
-        let img2 = img.lenght < 2 ? img[0] : img[1];
+        let img2 = img.length < 2 ? img[0] : img[1];
 
         // Second copy
         posX = this.amendmentPosition;
