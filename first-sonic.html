@@ -19,24 +19,38 @@
                         var context = canvas.getContext('2d');
 
                         var imgSonic = new Image();
-                        imgSonic.src = ""; // TODO: find image
+                        imgSonic.src = "img/sonic-spritesheet.png";
 
-                        var spriteSonic = new Spritesheet(context, imgSonic, 0, 0);
+                        var spriteSonic = null;
+                        imgSonic.onload = function () {
+                            spriteSonic = new Spritesheet(context, imgSonic, 3, 8);
+                            changeSprite(1);
+                        }
 
                         function changeSprite(sprite) {
                             clear();
                             switch (sprite) {
                                 case 1:
                                     spriteSonic.selectFrame(0, 0);
-                                    spriteSonic.drawSpecific(0, 0, canvas.width, canvas.height);
                                     break;
                                 case 2:
+                                    spriteSonic.selectFrame(0, 1);
                                     break;
                                 case 3:
+                                    spriteSonic.selectFrame(0, 2);
                                     break;
                                 case 4:
+                                    spriteSonic.selectFrame(0, 3);
                                     break;
+                                default:
+                                    return;
                             }
+                            spriteSonic.drawSpecific(
+                                canvas.width / 4,
+                                canvas.height / 4,
+                                canvas.width / 2,
+                                canvas.height / 2
+                            );
                         }
 
                         function clear() {
@@ -49,7 +63,7 @@
                     <button type="button" name="second" onclick="changeSprite(2);">Second</button>
                     <button type="button" name="third" onclick="changeSprite(3);">Third</button>
                     <button type="button" name="fourth" onclick="changeSprite(4);">Fourth</button>
-                    <button type="button" name="clear" onclick="clear();">Clear</button>
+                    <button type="button" name="clear" onclick="changeSprite(0);">Clear</button>
                 </div>
             </div>
             <footer class="footer_style_1">
