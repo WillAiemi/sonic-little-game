@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Good looking Sonic</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="background">
+            <header class="header_style_1">
+                <h1>Rendering a good looking Sonic</h1>
+            </header>
+            <div class="main_container flex_center">
+                <div class="canvas_container2">
+                    <canvas id="canvas_sonic_2" width="800" height="400"></canvas>
+                    <script type="text/javascript">
+                        var canvas = document.getElementById("canvas_sonic_2");
+                        var context = canvas.getContext("2d");
+
+                        let imgSonic = new Image();
+                        imgSonic.src = "img/sonic3.png";
+                        imgSonic.onload = function () {
+                            context.drawImage(
+                                imgSonic,
+                                canvas.width / 2 - imgSonic.width / 8,
+                                canvas.height - imgSonic.height / 4,
+                                imgSonic.width / 4,
+                                imgSonic.height / 4
+                            );
+                        }
+
+
+                    </script>
+                </div>
+            </div>
+            <footer class="footer_style_1">
+                <a href="select-version.html">Back</a>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -135,7 +135,7 @@
     flex-direction: column;
 }
 
-.canvas_container {
+.canvas_container1 {
     height: 300px;
     width: 300px;
     position: relative;
@@ -176,4 +176,19 @@
 
 .buttons_container button:active {
     box-shadow: 1px 1px 5px black;
+}
+
+.canvas_container2 {
+    height: 400px;
+    width: 800px;
+    position: relative;
+}
+
+.canvas_container2 canvas {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url("../img/sonic-background.png");
+    background-repeat: no-repeat;
+    background-position: top;
 }
