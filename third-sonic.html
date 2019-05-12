@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/background.js" charset="utf-8"></script>
         <script src="js/animation.js" charset="utf-8"></script>
+        <script src="js/sonic.js" charset="utf-8"></script>
+        <script src="js/spritesheet.js" charset="utf-8"></script>
     </head>
     <body>
         <div class="background">
@@ -27,8 +29,12 @@
                         imgBackground2.src = "img/background_2.png";
                         imgBackground2.onload = load;
 
+                        var imgSonic = new Image();
+                        imgSonic.src = "img/spritesheet.png";
+                        imgSonic.onload = load;
+
                         let loaded = 0;
-                        let total = 2;
+                        let total = 3;
 
                         function load() {
                             loaded++;
@@ -43,13 +49,17 @@
                             background.newBackground(imgBackground1);
                             background.newBackground(imgBackground2);
                             var animation = new Animation(context);
+                            var sonic = new Sonic(
+                                context,
+                                imgSonic,
+                                canvas.width / 8,
+                                canvas.height * 9 / 20
+                            );
 
                             animation.newSprite(background);
+                            animation.newSprite(sonic);
                             animation.turnOn();
                         };
-
-
-
                     </script>
                 </div>
             </div>
