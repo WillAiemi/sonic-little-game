@@ -18,18 +18,19 @@
                         var context = canvas.getContext("2d");
 
                         let imgSonic = new Image();
-                        imgSonic.src = "img/sonic3.png";
+                        imgSonic.src = "img/sonic-second-page.png";
                         imgSonic.onload = function () {
+                            let width = imgSonic.width / 7;
+                            let height = imgSonic.height / 7;
+
                             context.drawImage(
                                 imgSonic,
-                                canvas.width / 2 - imgSonic.width / 8,
-                                canvas.height - imgSonic.height / 4,
-                                imgSonic.width / 4,
-                                imgSonic.height / 4
+                                canvas.width / 2 - width / 2,
+                                canvas.height - height,
+                                width,
+                                height
                             );
                         }
-
-
                     </script>
                 </div>
             </div>
